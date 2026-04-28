@@ -1,0 +1,75 @@
+<h2 class="text-center mb-3">Type - 1</h2>
+<h2 class="text-center mb-4">Task-1</h2>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" 
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('html')
+        }"
+        class="nav-link"
+        (click)="onTabChange('html')"
+        >HTML</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" 
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('css')
+        }"
+        class="nav-link"
+        (click)="onTabChange('css')"
+        >CSS</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" 
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('javascript')
+        }"
+        class="nav-link"
+        (click)="selectedSkill='javascript'"
+        >JavaScript</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('angular')
+         }"
+        class="nav-link"
+        (click)="selectedSkill='angular' "
+        >Angular</a>
+    </li>
+</ul>
+
+<hr>
+
+<div class="tab-content">
+    <div class="card" *ngIf="selectedSkill.toLowerCase().includes('html')">
+        <div class="card-body">
+            <strong>HTML</strong> (HyperText Markup Language) is the standard language
+            for creating web pages. It uses elements and tags to structure content
+            like headings, paragraphs, images, and links that browsers display visually.
+        </div>
+    </div>    
+        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('css')">
+            <div class="card-body">
+                <strong>CSS</strong> (Cascading Style Sheets) is the language used to style
+                web pages. It controls colors, fonts, layouts, and spacing — making plain HTML
+                content visually attractive and responsive across different screen sizes.
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('javascript')">
+            <div class="card-body">
+                <strong>JavaScript</strong> is a programming language that makes web
+                pages interactive. It handles dynamic actions like button clicks, form validation,
+                animations, and real-time updates — bringing life to static HTML and CSS pages.
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('angular')">
+            <div class="card-body">
+                <strong>Angular</strong> is a TypeScript-based frontend framework by Google.
+                It helps build fast, scalable single-page applications using components,
+                and modules — making large web app development structured, and efficient.
+            </div>
+        </div>
+    </div>
+
+

@@ -1,0 +1,61 @@
+
+<h2 class="text-center mb-5 mt-5">Task-5</h2>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : selectedBird.toLowerCase().includes('sparrow')
+        }"
+        class="nav-link"
+        (click)="onTabChange('sparrow')"
+        >Sparrow</a></li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : selectedBird.toLowerCase().includes('peacock')
+        }"
+        class="nav-link"
+        (click)="onTabChange('peacock')"
+        >Peacock</a></li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : selectedBird.toLowerCase().includes('parrot')
+        }"
+        class="nav-link"
+        (click)="onTabChange('parrot')"
+        >Parrot</a></li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : selectedBird.toLowerCase().includes('flamingo')
+        }"
+        class="nav-link"
+        (click)="onTabChange('flamingo')"
+        >Flamingo</a></li>
+</ul>
+
+<hr>
+
+<div class="tab-content">
+    <div class="card" *ngIf="selectedBird.toLowerCase().includes('sparrow')">
+        <div class="card-body">
+            <strong>Sparrow</strong> Lor velit, dolor quis soluta mollitia nobis. Autem voluptatibus veniam ex corporis.
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedBird.toLowerCase().includes('peacock')">
+        <div class="card-body">
+            <strong>Peacock</strong> Lorem ipsum dandae quibusdam  Autem voluptatibus  expedita corporis!
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedBird.toLowerCase().includes('parrot')">
+        <div class="card-body">
+            <strong>Parrot</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctam ea molestiae obcaecati ess.
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedBird.toLowerCase().includes('flamingo')">
+        <div class="card-body">
+            <strong>Flamingo</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum labore suscip.
+        </div>
+    </div>
+</div>

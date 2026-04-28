@@ -1,0 +1,47 @@
+<h2 class="text-center mb-4 mt-4">Task-2</h2>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectFruit.toLowerCase().includes('mango')
+        }" class="nav-link" (click)="onTabChange('mango')">Mango</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectFruit.toLowerCase().includes('apple')
+        }" class="nav-link" (click)="onTabChange('apple')">Apple</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectFruit.toLowerCase().includes('banana')
+        }" class="nav-link" (click)="onTabChange('banana')">Banana</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectFruit.toLowerCase().includes('orange')
+        }" class="nav-link" (click)="onTabChange('orange')">Orange</a>
+    </li>
+</ul>
+
+<hr>
+
+<div class="tab-content">
+    <div class="card" *ngIf="selectFruit.toLowerCase().includes('mango')">
+        <div class="card-body">
+            <strong>Mango</strong> Lorem ipsum dolor sit, upiditate itaque nostrum dolores quos dolor!
+        </div>
+    </div>
+    <div class="card" *ngIf="selectFruit.toLowerCase().includes('apple')">
+        <div class="card-body">
+            <strong>Apple</strong> m ipsum dot, upiditate itaque nostrum dolores quos dolo
+        </div>
+    </div>
+    <div class="card" *ngIf="selectFruit.toLowerCase().includes('banana')">
+        <div class="card-body">
+            <strong>Banana</strong> orem ipsum dolor sit, upiditate itaque nostrum
+        </div>
+    </div>
+    <div class="card" *ngIf="selectFruit.toLowerCase().includes('orange')">
+        <div class="card-body">
+            <strong>Orange</strong> ipsum dolor sit, upiditate itaque nostrum dolores quos do
+        </div>
+    </div>

@@ -1,0 +1,66 @@
+
+<h2 class="text-center mb-4 mt-4">Task-3</h2>
+<ul class="nav nav-pills">
+   <li class="nav-item">
+    <a href="javascript:;"
+    [ngClass]="{
+        active : selectedFlower.toLowerCase().includes('rose')
+    }"
+    class="nav-link"
+    (click)="onTabChange('rose')"
+    >Rose</a></li>
+   <li class="nav-item">
+    <a href="javascript:;"
+     [ngClass]="{
+        active : selectedFlower.toLowerCase().includes('orchid')
+    }"
+    class="nav-link"
+    (click)="onTabChange('orchid')"
+    >Orchid</a></li>
+   <li class="nav-item">
+    <a href="javascript:;"
+     [ngClass]="{
+        active : selectedFlower.toLowerCase().includes('lotus')
+    }"
+    class="nav-link"
+    (click)="onTabChange('lotus')"
+    >Lotus</a></li>
+   <li class="nav-item">
+    <a href="javascript:;"
+     [ngClass]="{
+        active : selectedFlower.toLowerCase().includes('tulip')
+    }"
+    class="nav-link"
+    (click)="onTabChange('tulip')"
+    >Tulip</a></li>
+</ul>
+
+<hr>
+
+<div class="tab-content">
+    <div class="card" *ngIf="selectedFlower.toLowerCase().includes('rose')">
+        <div class="card-body">
+            <strong>Rose</strong> Lorem ipsum dolor, sit amet coiusto eligendi sint quis.
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFlower.toLowerCase().includes('orchid')">
+        <div class="card-body">
+            <strong>Orchid</strong> Lorem ipsum dol nam nihit ea consectetur culpa aliquid.
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFlower.toLowerCase().includes('lotus')">
+        <div class="card-body">
+            <strong>Lotus</strong> Lorem ipsum dolor sit amecusantium corrupti asperiores?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFlower.toLowerCase().includes('tulip')">
+        <div class="card-body">
+            <strong>Tulip</strong> Lorem ipsum dolor sit amet consectetur adipisicing el Et.
+    </div>
+</div>
+
+
+
+
+
+

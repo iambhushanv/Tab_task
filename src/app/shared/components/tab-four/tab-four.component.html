@@ -1,0 +1,56 @@
+<h2 class="text-center mb-5 mt-5">Task-4</h2>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectedCountry.toLowerCase().includes('india')
+        }" class="nav-link"
+        (click)="onTabChange('india')"
+        >India</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectedCountry.toLowerCase().includes('japan')
+        }" class="nav-link"
+        (click)="onTabChange('japan')"
+        >Japan</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectedCountry.toLowerCase().includes('france')
+        }" class="nav-link"
+        (click)="onTabChange('france')"
+        >France</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" [ngClass]="{
+            active : selectedCountry.toLowerCase().includes('spain')
+        }" class="nav-link"
+        (click)="onTabChange('spain')"
+        >Spain</a>
+    </li>
+</ul>
+
+<hr>
+
+<div class="tab-control">
+    <div class="card" *ngIf="selectedCountry.toLowerCase().includes('india')">
+        <div class="card-body">
+            <strong>India</strong> Lorem ipsum dolor sit. Dolores, odit quod oid quisquam tenetur! Quibusdam?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedCountry.toLowerCase().includes('japan')">
+        <div class="card-body">
+            <strong>Japan</strong> Lorem ipsum dptatibus ipsum od oid quisquam olor si dolor
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedCountry.toLowerCase().includes('france')">
+        <div class="card-body">
+            <strong>France</strong> Lorem ipsum dolor sit amet, consectetur adipisicin que ipsum molestias ut debitis.
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedCountry.toLowerCase().includes('spain')">
+        <div class="card-body">
+            <strong>Spain</strong> Lorem ipsum, dolor sit amet consectetur auam rerum tenetur, officia dolor eveniet.
+        </div>
+    </div>
+</div>

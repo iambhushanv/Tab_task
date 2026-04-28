@@ -1,0 +1,23 @@
+<h2 class="text-center mb-5 mt-5">Task-2</h2>
+<ul class="nav nav-pills">
+    <li *ngFor="let tab of tabsArr" class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+        active : selectedFlower.toLowerCase().includes(tab.flowerName)
+    }"
+        class="nav-link"
+        (click)="onTabChange(tab.flowerName)">
+      {{tab.tabTitle}}
+    </a>
+    </li>
+</ul>
+
+<hr>
+
+<div class="card">
+    <ng-container *ngFor="let tab of tabsArr; trackby: trackByFun">
+        <div class="card-body" [innerHTML]="tab.flowerContent"
+        *ngIf="selectedFlower.toLowerCase().includes(tab.flowerName)">
+        </div>
+    </ng-container>
+</div>
