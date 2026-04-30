@@ -12,6 +12,7 @@ import { TabSevenComponent } from './shared/components/tab-seven/tab-seven.compo
 import { TabEightComponent } from './shared/components/tab-eight/tab-eight.component';
 import { TabNineComponent } from './shared/components/tab-nine/tab-nine.component';
 import { TabTenComponent } from './shared/components/tab-ten/tab-ten.component';
+import { TabElevenComponent } from './shared/components/tab-eleven/tab-eleven.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TabTenComponent } from './shared/components/tab-ten/tab-ten.component';
     TabSevenComponent,
     TabEightComponent,
     TabNineComponent,
-    TabTenComponent
+    TabTenComponent,
+    TabElevenComponent
   ],
   imports: [
     BrowserModule

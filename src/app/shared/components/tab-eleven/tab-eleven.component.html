@@ -1,0 +1,72 @@
+
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" 
+        [ngClass]="{
+            active : SelectedFrameWork.toLowerCase().includes('angular')
+        }"
+        class="nav-link"
+        (click)="onTabChange('Angular')"
+        >Angular</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" 
+        [ngClass]="{
+            active : SelectedFrameWork.toLowerCase().includes('node')
+        }"
+        class="nav-link"
+        (click)="onTabChange('Node')"
+        >Node</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : SelectedFrameWork.toLowerCase().includes('express')
+        }"
+         class="nav-link"
+         (click)="onTabChange('Express')"
+         >Express</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" 
+         [ngClass]="{
+            active : SelectedFrameWork.toLowerCase().includes('javascript')
+        }"
+        (click)="onTabChange('Javascript')"
+        class="nav-link">Javascript</a>
+    </li>
+</ul>
+
+<hr>
+
+<ng-container [ngSwitch]="SelectedFrameWork">
+<p *ngSwitchCase="'Angular'" class="alert alert-info">
+    <strong>Angular</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum placeat aliquam,
+     eum corrupti velit molestias minus! Placeat quo assumenda blanditiis a culpa ex ut consequatur?
+</p>
+</ng-container>
+<ng-container [ngSwitch]="SelectedFrameWork">
+<p *ngSwitchCase="'Node'" class="alert alert-info">
+    <strong>Node</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore neque voluptates cumque 
+    dignissimos autem. Facilis voluptates eligendi beatae qui dignissimos mollitia, autem eum nobis iure?
+</p>
+</ng-container>
+<ng-container [ngSwitch]="SelectedFrameWork">
+<p *ngSwitchCase="'Express'" class="alert alert-info">
+    <strong>Express</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quas voluptatibus 
+    qui rem iure aperiam beatae doloribus delectus incidunt. Animi nostrum labore sint natus possimus.
+</p>
+</ng-container>
+<ng-container [ngSwitch]="SelectedFrameWork">
+<p *ngSwitchCase="'Javascript'" class="alert alert-info">
+    <strong>Javascript</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quas voluptatibus
+     qui rem iure aperiam beatae doloribus delectus incidunt. Animi nostrum labore sint natus possimus.
+</p>
+</ng-container>
+
+
+
+
+
+
+ 
