@@ -1,0 +1,46 @@
+
+<h2 class="text-center mb-4 mt-4">Task-4</h2>
+
+
+ <ul class="nav nav-pills mb-3">
+      <li class="nav-item" *ngFor="let skill of skills">
+        <a href="javascript:;"
+           class="nav-link"
+           [ngClass]="{ active: selectedSkill1 === skill.id }"
+           (click)="onTabchange(skill.id)">
+          {{ skill.name }}
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content" [ngSwitch]="selectedSkill1">
+
+      <div class="card" *ngFor="let skill of skills">
+        <div class="card-body" *ngSwitchCase="skill.id">
+          <strong>{{ skill.name }} :-</strong>
+          {{ skill.dif }}
+        </div>
+      </div>
+
+    </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
